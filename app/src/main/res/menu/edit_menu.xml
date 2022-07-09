@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_edit"
+        android:title="@string/update"
+        android:icon="@drawable/ic_baseline_edit"
+        android:iconTint="@color/white"
+        app:showAsAction="ifRoom"
+        tools:targetApi="o">
+
+    </item>
+
+    <item
+        android:id="@+id/menu_transfer"
+        android:title="@string/transfer"
+        android:icon="@drawable/ic_baseline_compare_arrows"
+        android:iconTint="@color/white"
+        app:showAsAction="ifRoom">
+
+    </item>
+</menu>

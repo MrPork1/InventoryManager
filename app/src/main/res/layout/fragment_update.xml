@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.UpdateFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+
+        <EditText
+            android:id="@+id/update_itemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/item_name"
+            android:inputType="text"
+            android:minHeight="48dp"/>
+
+
+        <EditText
+            android:id="@+id/update_itemAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/item_amount"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/select_location"
+            android:layout_marginTop="16dp"/>
+
+
+        <Spinner
+            android:id="@+id/update_spinner_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:contentDescription="@string/select_location"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/select_category"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/update_spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:contentDescription="@string/enter_category"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/select_measurement"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/update_spinner_measurement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:minHeight="48dp"
+            android:contentDescription="@string/select_measurement"/>
+
+        <TextView
+            android:id="@+id/update_createdDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/created_date"
+            android:minHeight="48dp"
+            android:textSize="18sp"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/update_expiredDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expired_date"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toTopOf="@+id/button_update_expiredDateDialog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_update_expiredDateDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expired_date"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/update_LastTookTimeTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="8:48 pm"-->
+<!--                android:textSize="18sp"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/button_update_lastTook_showTimeDialog"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/button_update_lastTook_showTimeDialog"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/button_update_lastTook_showTimeDialog"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/update_LastTookDateTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="6/15/2022"-->
+<!--                android:textSize="18sp"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/button_update_lastTook_showDateDialog"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/button_update_lastTook_showDateDialog"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/button_update_lastTook_showDateDialog"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button_update_lastTook_showTimeDialog"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:text="Last took time"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button_update_lastTook_showDateDialog"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="last took date"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        <EditText
+            android:id="@+id/update_itemNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:maxLines="5"
+            android:hint="@string/notes"
+            android:minHeight="48dp"
+            android:layout_marginTop="16dp"/>
+
+        <CheckBox
+            android:id="@+id/switch_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/frequency"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"/>
+
+<!--        <androidx.appcompat.widget.SwitchCompat-->
+<!--            android:id="@+id/switch_frequency"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="@string/frequency"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:textSize="18sp"/>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="@string/amount"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+<!--            <Button-->
+<!--                android:id="@+id/frequency_amount"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/amount"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"/>-->
+
+            <EditText
+                android:id="@+id/frequency_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Insert amount"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="Every"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <EditText
+                android:id="@+id/editTextTimeSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Insert time"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/frequency_amount" />
+
+            <Spinner
+                android:id="@+id/spinnerTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toEndOf="@+id/editTextTimeSpan"
+                app:layout_constraintTop_toBottomOf="@+id/frequency_amount" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button_update_updateItem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/update"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</ScrollView>

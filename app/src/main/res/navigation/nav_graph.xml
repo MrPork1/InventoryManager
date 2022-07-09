@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.sean.inventorymanager.fragments.listFragment"
+        android:label="List"
+        tools:layout="@layout/fragment_list">
+        <argument
+            android:name="ShowBottomNavBar"
+            android:defaultValue="true">
+        </argument>
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+        <action
+            android:id="@+id/action_listFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.sean.inventorymanager.fragments.addFragment"
+        android:label="Add Item"
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_addFragment_to_listFragment"
+            app:destination="@id/listFragment"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.sean.inventorymanager.fragments.UpdateFragment"
+        android:label="Update"
+        tools:layout="@layout/fragment_update">
+        <argument
+            android:name="currentItem"
+            app:argType="com.sean.inventorymanager.data.Item" />
+        <action
+            android:id="@+id/action_updateFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment"
+            app:popUpTo="@id/detailsFragment"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_updateFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calenderFragment"
+        android:name="com.sean.inventorymanager.fragments.CalenderFragment"
+        android:label="Calender"
+        tools:layout="@layout/fragment_calender" >
+        <argument
+            android:name="ShowBottomNavBar"
+            android:defaultValue="true">
+        </argument>
+        <action
+            android:id="@+id/action_calenderFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.sean.inventorymanager.fragments.DetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_details">
+        <argument
+        android:name="currentItem"
+        app:argType="com.sean.inventorymanager.data.Item"/>
+        <argument
+            android:name="ShowBottomNavBar"
+            android:defaultValue="false">
+        </argument>
+        <action
+            android:id="@+id/action_detailsFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+        <action
+            android:id="@+id/action_detailsFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.sean.inventorymanager.fragments.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings">
+        <argument
+            android:name="ShowBottomNavBar"
+            android:defaultValue="true">
+        </argument>
+    </fragment>
+    <fragment
+        android:id="@+id/todayFragment"
+        android:name="com.sean.inventorymanager.fragments.TodayFragment"
+        android:label="Next"
+        tools:layout="@layout/fragment_today">
+        <argument
+            android:name="ShowBottomNavBar"
+            android:defaultValue="true">
+        </argument>
+        <action
+            android:id="@+id/action_todayFragment_to_takeFragment"
+            app:destination="@id/takeFragment"
+            app:enterAnim="@anim/nav_default_enter_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/takeFragment"
+        android:name="com.sean.inventorymanager.fragments.TakeFragment"
+        android:label="Take"
+        tools:layout="@layout/fragment_take">
+        <argument
+            android:name="currentItem"
+            app:argType="com.sean.inventorymanager.data.Item" />
+        <argument
+            android:name="maxAmountToTake"
+            app:argType="float" />
+        <action
+            android:id="@+id/action_takeFragment_to_todayFragment"
+            app:destination="@id/todayFragment"
+            app:popUpTo="@id/todayFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

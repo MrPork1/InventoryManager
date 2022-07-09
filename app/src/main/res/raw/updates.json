@@ -1,0 +1,4 @@
+{
+  "UpdateVersion": 1,
+  "Details": "The app is created! Added a bottom bar navigation with fragments. A navigation graph exists for easy navigation through the application. Added SqlLite for data storage. Adding a search bar that queries the datbase for items. ",
+}

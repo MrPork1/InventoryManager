@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.addFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <EditText
+            android:id="@+id/itemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/item_name"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:drawablePadding="16dp"
+            android:drawableStart="@drawable/ic_baseline_edit"/>
+
+        <EditText
+            android:id="@+id/itemAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/item_amount"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:drawablePadding="16dp"
+            app:drawableStartCompat="@drawable/ic_baseline_numbers_24"/>
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="@string/select_location"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:drawablePadding="16dp"-->
+<!--            app:drawableStartCompat="@drawable/ic_baseline_location_on_24" />-->
+
+        <LinearLayout
+            android:id="@+id/location_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:minHeight="48dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:drawablePadding="16dp"
+                android:text="@string/select_location"
+                app:drawableStartCompat="@drawable/ic_baseline_location_on_24"/>
+
+            <TextView
+                android:id="@+id/location_selected_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_marginStart="40dp"
+                android:hint="@string/select_location"/>
+
+        </LinearLayout>
+
+
+
+        <Spinner
+            android:visibility="gone"
+            android:id="@+id/spinner_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/select_category"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="16dp"
+            app:drawableStartCompat="@drawable/ic_baseline_category_24"/>
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:minHeight="48dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/select_measurement"
+            android:layout_marginTop="16dp"
+            android:drawablePadding="16dp"
+            app:drawableStartCompat="@drawable/ruler"/>
+
+        <Spinner
+            android:id="@+id/spinner_measurement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="40dp"
+            android:minHeight="48dp"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/expiredDateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expired_date"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/button_expiredDateDialog"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_expiredDateDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/expired_date"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginTop="16dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/lastTookTimeTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/last_took"-->
+<!--                android:textSize="18sp"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/button_lasttook_showTimeDialog"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/button_lasttook_showTimeDialog"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/button_lasttook_showTimeDialog"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/lastTookDateTextView"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/last_took"-->
+<!--                android:textSize="18sp"-->
+<!--                app:layout_constraintBottom_toTopOf="@+id/button_lasttook_showDateDialog"-->
+<!--                app:layout_constraintEnd_toEndOf="@+id/button_lasttook_showDateDialog"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/button_lasttook_showDateDialog"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button_lasttook_showTimeDialog"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:text="Last took time"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--            <Button-->
+<!--                android:id="@+id/button_lasttook_showDateDialog"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="last took date"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        <EditText
+            android:id="@+id/itemNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:maxLines="5"
+            android:hint="@string/notes"
+            android:minHeight="48dp"
+            android:layout_marginTop="16dp"/>
+
+        <CheckBox
+            android:id="@+id/switch_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/frequency"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"/>
+
+<!--        <androidx.appcompat.widget.SwitchCompat-->
+<!--            android:id="@+id/switch_frequency"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="@string/frequency"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:textSize="18sp"/>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view_frequency"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rectangle"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="Amount"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/frequency_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Insert amount"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:text="Every"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <EditText
+                android:id="@+id/editTextTimeSpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Insert time"
+                android:inputType="numberDecimal"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toBottomOf="@+id/frequency_amount" />
+
+            <Spinner
+                android:id="@+id/spinnerTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                app:layout_constraintStart_toEndOf="@+id/editTextTimeSpan"
+                app:layout_constraintTop_toBottomOf="@+id/frequency_amount" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/button_addItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/add"/>
+
+    </LinearLayout>
+
+</ScrollView>
